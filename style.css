@@ -286,8 +286,8 @@ section {
 
 .arrow {
   position: absolute;
-  right: -1rem;
-  bottom: -1.5rem;
+  right: -5rem;
+  bottom: 2.5rem;
 }
 
 .details-container {
@@ -545,4 +545,11 @@ footer p {
     display: inline;
   }
 
+}
+
+@media screen and (max-width: 1200px) and (prefers-color-scheme: dark) {
+  /* Nur wenn sich Verhalten im Dark Mode ändern soll */
+  .arrow {
+    display: none;
+  }
 }
