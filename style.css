@@ -75,6 +75,12 @@ a:hover {
   text-decoration-color: var(--textdecoration-color);
 }
 
+.ul-experience{
+  list-style-type: none;
+  font-size: inherit;
+  font-weight: 600;
+}
+
 .logo {
   font-size: 2rem;
 }
@@ -319,6 +325,7 @@ section {
 
 .experience-details-container {
   display: flex;
+  margin: 1rem;
   justify-content: center;
   flex-direction: column;
 }
@@ -330,6 +337,10 @@ section {
   flex-direction: row;
   gap: 2.5rem;
   justify-content: space-around;
+}
+
+.experience-article{
+  width: 100%;
 }
 
 article {
@@ -436,10 +447,6 @@ footer p {
   }
   #hamburger-nav {
     display: flex;
-  }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
   }
   #profile,
   .section-container {
