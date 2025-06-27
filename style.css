@@ -95,8 +95,16 @@ nav {
   font-size: 1.25rem;
 }
 
-.desktop-nav-darkmode-btn{
+.desktop-nav-darkmode-btn, .darkmodebtn-hamburger-btn{
+  background: none;
   border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.desktop-nav-darkmode-btn img, .darkmodebtn-hamburger-btn img{
+  width: 48px;
+  height: 48px;
 }
 
 a {

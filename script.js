@@ -35,9 +35,13 @@ function applyTheme(theme) {
 
 function updateIcon() {
   const isDark = document.body.classList.contains("dark-mode");
-  const icon = isDark ? "☀️" : "🌙";
-  if (toggleBtnDesk) toggleBtnDesk.innerHTML = icon;
-  if (toggleBtnHamburger) toggleBtnHamburger.innerHTML = icon;
+  const iconPath = isDark ? "assets/light.png" : "assets/dark.png";
+
+  const iconDesk = document.getElementById("darkmodeIconDesk");
+  const iconHamburger = document.getElementById("darkmodeIconHamburger");
+
+  if (iconDesk) iconDesk.src = iconPath;
+  if (iconHamburger) iconHamburger.src = iconPath;
 }
 
 function toggleTheme() {
