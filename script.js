@@ -36,8 +36,8 @@ function applyTheme(theme) {
 function updateIcon() {
   const isDark = document.body.classList.contains("dark-mode");
   const icon = isDark ? "☀️" : "🌙";
-  if (toggleBtnDesk) toggleBtnDesk.textContent = icon;
-  if (toggleBtnHamburger) toggleBtnHamburger.textContent = icon;
+  if (toggleBtnDesk) toggleBtnDesk.innerHTML = icon;
+  if (toggleBtnHamburger) toggleBtnHamburger.innerHTML = icon;
 }
 
 function toggleTheme() {
