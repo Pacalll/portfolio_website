@@ -13,17 +13,14 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: www707.your-server.de
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          security: loose
-          port: 21
-          passive: true
-          local-dir: ./
-          server-dir: /public_html/
-          dangerous-clean-slate: false
-          timeout: 60000
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Deploy to Hetzner
+        run: |
+          lftp -e "
+          set ssl:verify-certificate no;
+          open ftp://${{ secrets.FTP_USERNAME }}:${{ secrets.FTP_PASSWORD }}@www707.your-server.de;
+          mirror -R ./ /public_html/ --verbose;
+          quit
+          "
