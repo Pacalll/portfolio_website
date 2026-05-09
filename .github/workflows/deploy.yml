@@ -18,15 +18,15 @@ jobs:
 
       - name: Deploy to Hetzner
         run: |
-          lftp -e "
+          lftp -d -e "
           set ftp:passive-mode true;
           set ssl:verify-certificate no;
 
-          open www707.your-server.de
+          open www707.your-server.de;
 
-          user ${{ secrets.FTP_USERNAME }} \"${{ secrets.FTP_PASSWORD }}\"
+          user ${{ secrets.FTP_USERNAME }} \"${{ secrets.FTP_PASSWORD }}\";
 
           mirror -R ./ /public_html/ --verbose;
 
-          bye
+          bye;
           "
