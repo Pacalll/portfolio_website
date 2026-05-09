@@ -24,7 +24,7 @@ jobs:
           set ftp:passive-mode true;
           set ssl:verify-certificate no;
 
-          open ftp://www707.your-server.de;
+          open ftp://157.90.184.171;
 
           user ${{ secrets.FTP_USERNAME }} \"${{ secrets.FTP_PASSWORD }}\";
 
