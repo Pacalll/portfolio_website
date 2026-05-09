@@ -16,10 +16,12 @@ jobs:
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: "www707.your-server.de"
+          server: ${{ secrets.SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
-          port: 22
+          port: 21
+          passive: true
           local-dir: ./
           server-dir: /public_html/
+          dangerous-clean-slate: true
