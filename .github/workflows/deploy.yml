@@ -19,7 +19,8 @@ jobs:
           server: www707.your-server.de
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftp
+          protocol: ftps
+          security: loose
           port: 21
           passive: true
           local-dir: ./
