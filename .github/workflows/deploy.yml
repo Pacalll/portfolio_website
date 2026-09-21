@@ -1,4 +1,4 @@
-name: Deploy Website to Hetzner
+name: Deploy to Hetzner via SFTP
 
 on:
   push:
@@ -6,31 +6,18 @@ on:
       - main
 
 jobs:
-  deploy:
+  sftp-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
+      - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Install lftp
-        run: sudo apt-get update && sudo apt-get install -y lftp
-
-      - name: Deploy to Hetzner
-        run: |
-          lftp -d -e "
-          set ftp:ssl-force true;
-          set ftp:ssl-protect-data true;
-          set ftp:passive-mode true;
-          set ssl:verify-certificate no;
-
-          open ftp://157.90.184.171;
-
-          user ${{ secrets.FTP_USERNAME }} \"${{ secrets.FTP_PASSWORD }}\";
-
-          ls;
-
-          mirror -R ./ /public_html/ --verbose;
-
-          bye;
-          "
+      - name: SFTP Deploy
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          username: ${{ secrets.SFTP_USERNAME }}
+          server: ${{ secrets.SFTP_SERVER }}
+          port: 22
+          password: ${{ secrets.SFTP_PASSWORD }}
+          local_path: './*'
+          remote_path: '/public_html/'
