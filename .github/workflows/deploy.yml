@@ -24,5 +24,8 @@ jobs:
           lftp -u "$SFTP_USERNAME","$SFTP_PASSWORD" sftp://$SFTP_SERVER -e "
           set sftp:auto-confirm yes;
           set ssl:verify-certificate no;
-          mirror -R --delete --exclude-glob .git* --exclude-glob .github/ --verbose ./ /public_html/;
+          put -O /public_html/ index.html;
+          put -O /public_html/ style.css;
+          put -O /public_html/ script.js;
+          mirror -R --delete --verbose assets/ /public_html/assets/;
           bye"
