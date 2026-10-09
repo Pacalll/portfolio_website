@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pascal Heilmanns Webseite</title>
+    <link rel="alternate" hreflang="de" href="https://pascalheilmann.io/de/index.html" />
+    <link rel="alternate" hreflang="en" href="https://pascalheilmann.io/" />
+    <link rel="alternate" hreflang="es" href="https://pascalheilmann.io/es/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://pascalheilmann.io/" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="../script.js" defer></script>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Pascal Heilmann</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">Über mich</a></li>
+          <li><a href="#experience">Erfahrung</a></li>
+          <li><a href="#projects">Projekte</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <select id="langSelectDesk" class="lang-dropdown">
+          <option value="/de/index.html" selected>DE</option>
+          <option value="/">EN</option>
+          <option value="/es/index.html">ES</option>
+        </select>
+      </div>
+      <div>
+        <button id="toggleBtnDesk" class="desktop-nav-darkmode-btn">
+          <img id="darkmodeIconDesk" src="/assets/dark.png" alt="Dark Mode Icon">
+        </button>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Pascal Heilmann</div>
+      <div>
+        <select id="langSelectHamburger" class="lang-dropdown">
+          <option value="/de/index.html" selected>DE</option>
+          <option value="/">EN</option>
+          <option value="/es/index.html">ES</option>
+        </select>
+      </div>
+      <div>
+        <button id="toggleBtnHamburger" class="darkmodebtn-hamburger-btn">
+          <img id="darkmodeIconHamburger" src="/assets/dark.png" alt="Dark Mode Icon">
+        </button>
+      </div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">Über mich</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Erfahrung</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projekte</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="/assets/profile-pic.png" alt="profile picture" loading="lazy"/>
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hallo, ich bin</p>
+        <h1 class="title">Pascal Heilmann</h1>
+        <p class="section__text__p2">IT-Experte</p>
+        <div class="btn-container">
+          
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Kontaktinfo
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="/assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://de.linkedin.com/in/pascal-heilmann-1203b5171'"
+            loading="lazy"
+          />
+          <img
+            src="/assets/linkedin-darkmode.png"
+            alt="My LinkedIn profile"
+            class="icon-dark"
+            onclick="location.href='https://de.linkedin.com/in/pascal-heilmann-1203b5171'"
+            loading="lazy"
+          />
+          <img
+            src="/assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/Pacalll/'"
+            loading="lazy"
+          />
+          <img
+            src="/assets/github-darkmode.png"
+            alt="My Github profile"
+            class="icon-dark"
+            onclick="location.href='https://github.com/Pacalll/'"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Lerne mich kennen</p>
+      <h1 class="title">Über mich</h1>
+      <div class="section-container">
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="/assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+                loading="lazy"
+              />
+              <img
+                src="/assets/experience-darkmode.png"
+                alt="Experience icon"
+                class="icon-dark"
+                loading="lazy"
+              />
+              <h3>Berufserfahrung</h3>
+              <p>1 Jahr <br />Webentwicklung</p>
+              <br>
+              <p>5 Jahre <br> Systemadministrator + IT-Support</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="/assets/education.png"
+                alt="Education icon"
+                class="icon"
+                loading="lazy"
+              />
+              <img
+                src="/assets/education-darkmode.png"
+                alt="Education icon"
+                class="icon-dark"
+                loading="lazy"
+              />
+              <h3>Ausbildung</h3>
+              <p>B.Sc. Bachelorabschluss</p><br>
+              <p>Ausbildung zum <br>Fachinformatiker <br>(Fachrichtung: Systemintegration)</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Hallo! Ich bin Pascal, ein leidenschaftlicher IT-Experte mit vielseitigem
+               Hintergrund in IT-Sicherheit, Systemadministration und Anwendersupport.
+               Ich liebe es, komplexe Probleme zu lösen und innovative
+               Lösungen zur Verbesserung der Cybersicherheit umzusetzen. Mit einem Bachelorabschluss
+               in IT-Sicherheit und praktischer Erfahrung in Webentwicklung und
+                Systemadministration bringe ich eine einzigartige Mischung aus technischem Know-how und
+                 praktischen Fähigkeiten in jedes Projekt ein. Möchtest du mehr über mich erfahren?
+                  Kontaktiere mich gerne!
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="/assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+        loading="lazy"
+      />
+      <img
+        src="/assets/arrow-darkmode.png"
+        alt="Arrow icon"
+        class="icon-dark arrow"
+        onclick="location.href='./#experience'"
+        loading="lazy"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Entdecke meine</p>
+      <h1 class="title">Erfahrung</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Webentwicklung</h2>
+            <div class="article-container">
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy" />
+                <img src="/assets/checkmark-darkmode.png" alt="Experience icon" class="icon-dark" loading="lazy" />
+                <div><h3>HTML</h3><p>Erfahren</p></div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy" />
+                <img src="/assets/checkmark-darkmode.png" alt="Experience icon" class="icon-dark" loading="lazy" />
+                <div><h3>CSS</h3><p>Erfahren</p></div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy" />
+                <img src="/assets/checkmark-darkmode.png" alt="Experience icon" class="icon-dark" loading="lazy" />
+                <div><h3>Git</h3><p>Fortgeschritten</p></div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy" />
+                <img src="/assets/checkmark-darkmode.png" alt="Experience icon" class="icon-dark" loading="lazy" />
+                <div><h3>JavaScript</h3><p>Fortgeschritten</p></div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy" />
+                <img src="/assets/checkmark-darkmode.png" alt="Experience icon" class="icon-dark" loading="lazy" />
+                <div><h3>TypeScript</h3><p>Fortgeschritten</p></div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy" />
+                <img src="/assets/checkmark-darkmode.png" alt="Experience icon" class="icon-dark" loading="lazy" />
+                <div><h3>Django</h3><p>Grundkenntnisse</p></div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Entwicklung</h2>
+            <div class="article-container">
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy" />
+                <img src="/assets/checkmark-darkmode.png" alt="Experience icon" class="icon-dark" loading="lazy" />
+                <div><h3>SQL</h3><p>Erfahren</p></div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy" />
+                <img src="/assets/checkmark-darkmode.png" alt="Experience icon" class="icon-dark" loading="lazy" />
+                <div><h3>Python</h3><p>Erfahren</p></div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy" />
+                <img src="/assets/checkmark-darkmode.png" alt="Experience icon" class="icon-dark" loading="lazy" />
+                <div><h3>C++</h3><p>Fortgeschritten</p></div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy" />
+                <img src="/assets/checkmark-darkmode.png" alt="Experience icon" class="icon-dark" loading="lazy" />
+                <div><h3>UML Modeling</h3><p>Fortgeschritten</p></div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">IT-Administration</h2>
+            <div class="article-container">
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy" />
+                <img src="/assets/checkmark-darkmode.png" alt="Experience icon" class="icon-dark" loading="lazy" />
+                <div><h3>VMware</h3><p>Erfahren</p></div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy" />
+                <img src="/assets/checkmark-darkmode.png" alt="Experience icon" class="icon-dark" loading="lazy" />
+                <div><h3>Linux</h3><p>Erfahren</p></div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy" />
+                <img src="/assets/checkmark-darkmode.png" alt="Experience icon" class="icon-dark" loading="lazy" />
+                <div><h3>Windows Server</h3><p>Fortgeschritten</p></div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy" />
+                <img src="/assets/checkmark-darkmode.png" alt="Experience icon" class="icon-dark" loading="lazy" />
+                <div><h3>Storage</h3><p>Erfahren</p></div>
+              </article>
+              <article>
+                <img src="/assets/checkmark.png" alt="Experience icon" class="icon" loading="lazy" />
+                <img src="/assets/checkmark-darkmode.png" alt="Experience icon" class="icon-dark" loading="lazy" />
+                <div><h3>Network</h3><p>Erfahren</p></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="/assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" loading="lazy" />
+      <img src="/assets/arrow-darkmode.png" alt="Arrow icon" class="icon-dark arrow" onclick="location.href='./#projects'" loading="lazy" />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Durchstöbere meine neuesten</p>
+      <h1 class="title">Projekte</h1>
+      <div class="experience-details-container">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Fitness Coach Website</h2>
+          <div class="article-container">
+            <article class="experience-article">
+              <div>
+                <h3>Eine einfache, responsive One-Page-Portfolio-Webseite für einen Fitness-Coach, gebaut mit HTML, CSS und JavaScript.</h3>
+                <h3>Enthält einen Blog-Bereich, integriert mit JSON und JavaScript. Gestaltet für Mobilgeräte und Desktop, mit aufklappbarem Menü und übersichtlichem Layout. Domain und Webhosting verwalte ich ebenfalls selbst.</h3>
+                <br>
+                <a href="https://github.com/Pacalll/dani_fitness" target="_blank">🔗 Auf GitHub ansehen</a>
+                <a href="https://www.staiger.fitness" target="_blank">🌐 Webseite besuchen</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="experience-details-container">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Tiny JavaScript Projects</h2>
+          <div class="article-container">
+            <article class="experience-article">
+              <div>
+                <h3>Tiny JavaScript Projects ist ein minimalistisches Web-Portfolio, das kleine JavaScript-Anwendungen zeigt, die ich zum Üben und zur Demonstration grundlegender Webentwicklungs-Skills gebaut habe.</h3>
+                <h3>Es zeigt kleine interaktive Apps, die ich zum Üben wichtiger Webentwicklungs-Skills erstellt habe. Die Seite enthält unter anderem folgende Projekte:</h3>
+                <br>
+                <ul class="ul-experience">
+                  <li>- Caesar Cipher Tool</li>
+                  <li>- Weather App</li>
+                  <li>- Currency Converter</li>
+                  <li>- Rock Paper Scissors Game</li>
+                  <li>- Stopwatch</li>
+                  <li>- Digital Clock</li>
+                  <li>...and many more</li>
+                </ul>
+                <br>
+                <a href="https://github.com/Pacalll/tiny-js-projects" target="_blank">🔗 Auf GitHub ansehen</a>
+                <a href="https://pacalll.github.io/tiny-js-projects/" target="_blank">🌐 Webseite besuchen</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+      
+      <img src="/assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" loading="lazy" />
+      <img src="/assets/arrow-darkmode.png" alt="Arrow icon" class="icon-dark arrow" onclick="location.href='./#contact'" loading="lazy" />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Kontakt aufnehmen</p>
+      <h1 class="title">Kontakt</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="/assets/email.png" alt="Email icon" class="icon contact-icon email-icon" loading="lazy" />
+          <img src="/assets/email-darkmode.png" alt="Email icon" class="icon-dark contact-icon email-icon" loading="lazy" />
+          <p><a href="mailto:pascalheilmann95@gmail.com">Mail</a></p>
+        </div>
+        
+        <div class="contact-info-container">
+          <img src="/assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" loading="lazy" />
+          <img src="/assets/linkedin-darkmode.png" alt="LinkedIn icon" class="icon-dark contact-icon" loading="lazy" />
+          <p><a href="https://de.linkedin.com/in/pascal-heilmann-1203b5171">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="#experience">Erfahrung</a></li>
+            <li><a href="#projects">Projekte</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p id="footer">Copyright &#169; <span id="footer_year">2026</span> Pascal Heilmann. Alle Rechte vorbehalten.</p>
+    </footer>
+  </body>
+</html>

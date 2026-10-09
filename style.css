@@ -202,7 +202,15 @@ a:hover, .desktop-nav-darkmode-btn:hover {
 .menu-links li {
   list-style: none;
 }
-
+.lang-dropdown {
+  padding: 0.3rem 0.6rem;
+  font: inherit;
+  font-size: 1.25rem;
+  color: var(--main-font-color);
+  background: var(--main-bg-color);
+  border: none;
+  cursor: pointer;
+} 
 .menu-links.open {
   max-height: 300px;
 }

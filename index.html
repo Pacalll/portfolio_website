@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="alternate" hreflang="de" href="https://pascalheilmann.io/de/index.html" />
+    <link rel="alternate" hreflang="en" href="https://pascalheilmann.io/" />
+    <link rel="alternate" hreflang="es" href="https://pascalheilmann.io/es/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://pascalheilmann.io/" />
     <title>Pascal's Website</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <nav id="desktop-nav">
@@ -19,6 +24,13 @@
         </ul>
       </div>
       <div>
+        <select id="langSelectDesk" class="lang-dropdown">
+          <option value="/de/index.html">DE</option>
+          <option value="/" selected>EN</option>
+          <option value="/es/index.html">ES</option>
+        </select>
+      </div>
+      <div>
         <button id="toggleBtnDesk" class="desktop-nav-darkmode-btn">
           <img id="darkmodeIconDesk" src="assets/dark.png" alt="Dark Mode Icon">
         </button>
@@ -26,6 +38,13 @@
     </nav>
     <nav id="hamburger-nav">
       <div class="logo">Pascal Heilmann</div>
+      <div>
+        <select id="langSelectHamburger" class="lang-dropdown">
+          <option value="/de/index.html">DE</option>
+          <option value="/" selected>EN</option>
+          <option value="/es/index.html">ES</option>
+        </select>
+      </div>
       <div>
         <button id="toggleBtnHamburger" class="darkmodebtn-hamburger-btn">
           <img id="darkmodeIconHamburger" src="assets/dark.png" alt="Dark Mode Icon">
@@ -594,8 +613,7 @@
           </ul>
         </div>
       </nav>
-      <p id="footer">Copyright &#169; 2025 Pascal Heilmann. All Rights Reserved.</p>
+      <p id="footer">Copyright &#169; <span id="footer_year">2029</span> Pascal Heilmann. All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>
