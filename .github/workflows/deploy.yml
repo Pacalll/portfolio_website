@@ -28,4 +28,6 @@ jobs:
           put -O /public_html/ style.css;
           put -O /public_html/ script.js;
           mirror -R --delete --verbose assets/ /public_html/assets/;
+          mirror -R --delete --verbose de/ /public_html/de/;
+          mirror -R --delete --verbose es/ /public_html/es/;
           bye"
